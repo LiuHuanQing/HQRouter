@@ -1,4 +1,6 @@
-Router写了三个版本,写了最后发现跟MGJRouter大部分重合,最后在MGJRouter的基础上封装了一层
+Router写了三个版本,写了最后发现跟__MGJRouter__大部分重合,最后在__MGJRouter__的基础上封装了一层
+
+我增加了__HQRouterHelper__工具类读取路由表,想着以后如果有多个路由文件在这里处理处理
 
 具体用法:
 ```objc
