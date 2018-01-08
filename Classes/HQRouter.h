@@ -12,6 +12,9 @@
 
 /** HQRouter的接口形式与MGJRouter相同,故不在做实现,直接使用MGJRouter */
 @interface HQRouter : MGJRouter
+
++ (instancetype)shared;
+
 @end
 
 /** 
