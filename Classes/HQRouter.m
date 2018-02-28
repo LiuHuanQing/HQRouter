@@ -8,7 +8,7 @@
 
 #import "HQRouter.h"
 #import <objc/runtime.h>
-#import "Aspects.h"
+//#import "Aspects.h"
 
 NSString *const HQRouterResultController = @"_vc";
 NSString *const HQRouterResultParameters = @"_p";
@@ -150,18 +150,18 @@ static char kAssociatedNavigationObjectKey;
 @implementation UIViewController (HQRouter)
 static char kAssociatedHQRouterParamsObjectKey;
 
-+ (void)load
-{
-    [self aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
-        [aspectInfo.instance hq_registerRouter];
-    } error:NULL];
-    
-    
-    [self aspect_hookSelector:NSSelectorFromString(@"dealloc") withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo){
-        [aspectInfo.instance hq_deregisterRouter];
-    } error:NULL];
-    
-}
+//+ (void)load
+//{
+//    [self aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
+//        [aspectInfo.instance hq_registerRouter];
+//    } error:NULL];
+//
+//
+//    [self aspect_hookSelector:NSSelectorFromString(@"dealloc") withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo){
+//        [aspectInfo.instance hq_deregisterRouter];
+//    } error:NULL];
+//
+//}
 
 
 - (void)setRouterParams:(NSDictionary *)paramsDictionary
@@ -174,8 +174,8 @@ static char kAssociatedHQRouterParamsObjectKey;
     return objc_getAssociatedObject(self, &kAssociatedHQRouterParamsObjectKey);
 }
 
-- (void)hq_registerRouter {};
+//- (void)hq_registerRouter {};
 
-- (void)hq_deregisterRouter {};
+//- (void)hq_deregisterRouter {};
 
 @end

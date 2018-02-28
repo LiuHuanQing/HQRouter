@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "HQRouter"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "路由功能"
 
   # This description is used to generate tags and improve search results.
@@ -134,5 +134,5 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 
     s.dependency "MGJRouter" ,"~> 0.9.3"
-    s.dependency "Aspects" ,"~> 1.4.1"
+    # s.dependency "Aspects" ,"~> 1.4.1"
 end
